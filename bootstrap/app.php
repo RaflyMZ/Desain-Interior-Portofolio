@@ -20,6 +20,9 @@ $app = Application::configure(basePath: dirname(__DIR__))
 // 💡 TAMBAHKAN BLOK KODE INI TEPAT DI BAWAH VARIABEL $app SEBELUM return
 if (isset($_ENV['NOW_REGION']) || env('LOG_CHANNEL') === 'stderr') {
     $app->useBootstrapPath('/tmp/bootstrap');
+    
+    // Paksa Laravel mengompilasi file Blade ke dalam folder /tmp yang writeable
+    config(['view.compiled' => '/tmp/storage/framework/views']);
 }
 
 return $app;
