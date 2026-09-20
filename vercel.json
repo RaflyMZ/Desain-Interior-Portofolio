@@ -1,6 +1,5 @@
 {
     "version": 2,
-    "framework": null,
     "builds": [
         {
             "src": "api/index.php",
@@ -21,10 +20,6 @@
             "dest": "/storage/app/public/$1"
         },
         {
-            "src": "/files/(.*)",
-            "dest": "/public/files/$1"
-        },
-        {
             "src": "/favicon.ico",
             "dest": "/public/favicon.ico"
         },
@@ -40,7 +35,7 @@
     "env": {
         "APP_NAME": "Portofolio Desain Interior",
         "APP_ENV": "production",
-        "APP_DEBUG": "false",
+        "APP_DEBUG": "true",
         "APP_TIMEZONE": "Asia/Jakarta",
         "APP_URL": "https://ghiyas-portofolio-gcc6urq2f-rafly-mz.vercel.app",
         "APP_LOCALE": "en",
