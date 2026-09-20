@@ -38,6 +38,13 @@
         "APP_DEBUG": "true",
         "APP_TIMEZONE": "Asia/Jakarta",
         "APP_URL": "https://vercel.app",
-        "APP_LOCALE": "en"
+        "APP_LOCALE": "en",
+        "LOG_CHANNEL": "stderr",
+        "SESSION_DRIVER": "cookie",
+        "CACHE_STORE": "array",
+        "CACHE_DRIVER": "array",
+        "DB_CONNECTION": "sqlite",
+        "DB_DATABASE": "/tmp/database.sqlite",
+        "VIEW_COMPILED_PATH": "/tmp/storage/framework/views"
     }
 }
