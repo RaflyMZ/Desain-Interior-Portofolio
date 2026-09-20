@@ -1,14 +1,16 @@
 {
     "version": 2,
     "framework": null,
-    "installCommand": "npm install --ignore-scripts=false",
-    "buildCommand": "npm run build",
-    "outputDirectory": "public",
-    "functions": {
-        "api/index.php": {
-            "runtime": "vercel-php@0.7.3"
+    "builds": [
+        {
+            "src": "api/index.php",
+            "use": "vercel-php@0.7.3"
+        },
+        {
+            "src": "public/**/*",
+            "use": "@vercel/static"
         }
-    },
+    ],
     "routes": [
         {
             "src": "/build/(.*)",
@@ -37,9 +39,11 @@
     ],
     "env": {
         "APP_NAME": "Portofolio Desain Interior",
-        "APP_KEY": "base64:OdoP653jv436/JSfcIXEXhgApJdyv4mi6SR69qohiFc=",
         "APP_ENV": "production",
         "APP_DEBUG": "false",
+        "APP_TIMEZONE": "Asia/Jakarta",
+        "APP_URL": "https://ghiyas-portofolio-gcc6urq2f-rafly-mz.vercel.app",
+        "APP_LOCALE": "en",
         "APP_CONFIG_CACHE": "/tmp/bootstrap/cache/config.php",
         "APP_EVENTS_CACHE": "/tmp/bootstrap/cache/events.php",
         "APP_PACKAGES_CACHE": "/tmp/bootstrap/cache/packages.php",
