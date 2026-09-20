@@ -1,6 +1,7 @@
 {
     "version": 2,
     "framework": null,
+    "installCommand": "npm install --ignore-scripts=false",
     "buildCommand": "npm run build",
     "functions": {
         "api/index.php": {
