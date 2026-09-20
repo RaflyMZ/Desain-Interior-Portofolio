@@ -1,5 +1,15 @@
 <?php
 
+// 💡 SUNTIKKAN PENGATURAN INI SECARA ABSOLUT DI AWAL RUNTIME PHP VERCEL
+putenv('APP_ENV=production');
+putenv('LOG_CHANNEL=stderr');
+putenv('CACHE_STORE=array');
+putenv('CACHE_DRIVER=array');
+putenv('SESSION_DRIVER=cookie');
+putenv('DB_CONNECTION=sqlite');
+putenv('DB_DATABASE=/tmp/database.sqlite');
+putenv('VIEW_COMPILED_PATH=/tmp/storage/framework/views');
+
 // 1. Pastikan direktori writeable /tmp tersedia untuk Vercel serverless environment
 $tmpDirs = [
     '/tmp/storage/app/public',
@@ -17,16 +27,7 @@ foreach ($tmpDirs as $dir) {
     }
 }
 
-// 2. Definisikan secara paksa driver-driver utama agar tidak terbaca null/kosong oleh Manager
-$_ENV['LOG_CHANNEL'] = 'stderr';
-$_ENV['CACHE_STORE'] = 'array';
-$_ENV['CACHE_DRIVER'] = 'array';
-$_ENV['SESSION_DRIVER'] = 'cookie';
-$_ENV['DB_CONNECTION'] = 'sqlite';
-$_ENV['DB_DATABASE'] = '/tmp/database.sqlite';
-$_ENV['VIEW_COMPILED_PATH'] = '/tmp/storage/framework/views';
-
-// 3. Copy database SQLite ke /tmp jika belum ada di instance serverless
+// 2. Copy database SQLite ke /tmp jika belum ada di instance serverless
 $sourceDb = __DIR__ . '/../database/database.sqlite';
 $targetDb = '/tmp/database.sqlite';
 
@@ -34,5 +35,5 @@ if (file_exists($sourceDb) && !file_exists($targetDb)) {
     copy($sourceDb, $targetDb);
 }
 
-// 4. Jalankan entry point Laravel
+// 3. Jalankan entry point Laravel
 require __DIR__ . '/../public/index.php';
