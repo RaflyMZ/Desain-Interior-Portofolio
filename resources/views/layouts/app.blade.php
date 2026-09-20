@@ -114,7 +114,7 @@
             &copy; {{ date('Y') }} Studio Interior
         </span>
         <span style="font-size: 0.7rem; color: var(--color-muted);">
-            Jakarta, Indonesia
+            Bandung, Indonesia
         </span>
     </footer>
 
