@@ -13,7 +13,6 @@
             "src": "storage/app/public/**/*",
             "use": "@vercel/static"
         }
-        
     ],
     "routes": [
         {
