@@ -1,0 +1,6 @@
+/node_modules
+/.phpunit.cache
+/tests
+.env
+.env.backup
+.env.production
