@@ -1,6 +1,6 @@
 <?php
 
-// 1. Pastikan direktori writeable /tmp tersedia untuk Vercel serverless environment
+// Pastikan direktori writeable /tmp tersedia untuk Vercel serverless environment
 $tmpDirs = [
     '/tmp/storage/app/public',
     '/tmp/storage/framework/views',
@@ -9,7 +9,6 @@ $tmpDirs = [
     '/tmp/storage/framework/sessions',
     '/tmp/storage/logs',
     '/tmp/bootstrap/cache',
-    '/tmp/database', // Tambahkan folder penampung database
 ];
 
 foreach ($tmpDirs as $dir) {
@@ -18,7 +17,7 @@ foreach ($tmpDirs as $dir) {
     }
 }
 
-// 2. Copy database SQLite ke /tmp jika belum ada di instance serverless
+// Copy database SQLite ke /tmp jika belum ada di instance serverless
 $sourceDb = __DIR__ . '/../database/database.sqlite';
 $targetDb = '/tmp/database.sqlite';
 
@@ -26,5 +25,5 @@ if (file_exists($sourceDb) && !file_exists($targetDb)) {
     copy($sourceDb, $targetDb);
 }
 
-// 3. Jalankan aplikasi Laravel melalui entry point utama
+// Jalankan entry point Laravel
 require __DIR__ . '/../public/index.php';
