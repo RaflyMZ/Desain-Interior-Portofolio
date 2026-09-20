@@ -11,11 +11,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
-        // Pastikan log diarahkan ke folder /tmp jika berjalan di Vercel
-        if (env('LOG_CHANNEL') === 'stderr' || isset($_ENV['NOW_REGION'])) {
-            $this->app->useStoragePath('/tmp/storage');
-        }
-
+        // 💡 Di Laravel 11, biarkan metode register ini kosong atau bersihkan dari kode require jembatan Vercel
     }
 
     /**
