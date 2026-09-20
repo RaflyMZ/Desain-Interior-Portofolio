@@ -15,27 +15,31 @@
         }
     ],
     "routes": [
-        {
-            "src": "/build/(.*)",
-            "dest": "/public/build/$1"
-        },
-        {
-            "src": "/storage/(.*)",
-            "dest": "/storage/app/public/$1"
-        },
-        {
-            "src": "/favicon.ico",
-            "dest": "/public/favicon.ico"
-        },
-        {
-            "src": "/robots.txt",
-            "dest": "/public/robots.txt"
-        },
-        {
-            "src": "/(.*)",
-            "dest": "/api/index.php"
-        }
-    ],
+    {
+        "src": "/build/(.*)",
+        "dest": "/public/build/$1"
+    },
+    {
+        "src": "/storage/(.*)",
+        "dest": "/storage/app/public/$1"
+    },
+    {
+        "src": "/files/(.*)",
+        "dest": "/public/files/$1"
+    },
+    {
+        "src": "/favicon.ico",
+        "dest": "/public/favicon.ico"
+    },
+    {
+        "src": "/robots.txt",
+        "dest": "/public/robots.txt"
+    },
+    {
+        "src": "/(.*)",
+        "dest": "/api/index.php"
+    }
+    ]
     "env": {
         "APP_NAME": "Portofolio Desain Interior",
         "APP_ENV": "production",
