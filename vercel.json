@@ -39,7 +39,7 @@
         "src": "/(.*)",
         "dest": "/api/index.php"
     }
-    ]
+    ],
     "env": {
         "APP_NAME": "Portofolio Desain Interior",
         "APP_ENV": "production",
