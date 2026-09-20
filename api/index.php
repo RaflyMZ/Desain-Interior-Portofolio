@@ -1,6 +1,6 @@
 <?php
 
-// Pastikan direktori writeable /tmp tersedia untuk Vercel serverless environment
+// 1. Pastikan direktori writeable /tmp tersedia untuk Vercel serverless environment
 $tmpDirs = [
     '/tmp/storage/app/public',
     '/tmp/storage/framework/views',
@@ -17,7 +17,16 @@ foreach ($tmpDirs as $dir) {
     }
 }
 
-// Copy database SQLite ke /tmp jika belum ada di instance serverless
+// 2. Definisikan secara paksa driver-driver utama agar tidak terbaca null/kosong oleh Manager
+$_ENV['LOG_CHANNEL'] = 'stderr';
+$_ENV['CACHE_STORE'] = 'array';
+$_ENV['CACHE_DRIVER'] = 'array';
+$_ENV['SESSION_DRIVER'] = 'cookie';
+$_ENV['DB_CONNECTION'] = 'sqlite';
+$_ENV['DB_DATABASE'] = '/tmp/database.sqlite';
+$_ENV['VIEW_COMPILED_PATH'] = '/tmp/storage/framework/views';
+
+// 3. Copy database SQLite ke /tmp jika belum ada di instance serverless
 $sourceDb = __DIR__ . '/../database/database.sqlite';
 $targetDb = '/tmp/database.sqlite';
 
@@ -25,5 +34,5 @@ if (file_exists($sourceDb) && !file_exists($targetDb)) {
     copy($sourceDb, $targetDb);
 }
 
-// Jalankan entry point Laravel
+// 4. Jalankan entry point Laravel
 require __DIR__ . '/../public/index.php';

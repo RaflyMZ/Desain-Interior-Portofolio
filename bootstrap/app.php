@@ -17,12 +17,9 @@ $app = Application::configure(basePath: dirname(__DIR__))
         //
     })->create();
 
-// 💡 TAMBAHKAN BLOK KODE INI TEPAT DI BAWAH VARIABEL $app SEBELUM return
+
 if (isset($_ENV['NOW_REGION']) || env('LOG_CHANNEL') === 'stderr') {
     $app->useBootstrapPath('/tmp/bootstrap');
-    
-    // Gunakan $_ENV untuk mengalihkan path kompilasi Blade sebelum container siap
-    $_ENV['VIEW_COMPILED_PATH'] = '/tmp/storage/framework/views';
 }
 
 return $app;
