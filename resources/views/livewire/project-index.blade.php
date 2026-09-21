@@ -42,15 +42,6 @@
                     <span style="color:var(--color-muted);font-size:0.75rem;letter-spacing:0.1em;">{{ strtoupper($project->kategori ?? 'Hospitality') }}</span>
                 </div>
             @endif
-            <div class="project-grid__caption" style="padding: 2.5rem 2rem 2rem;">
-                <p style="font-size:0.7rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--color-accent);margin-bottom:0.35rem;">
-                    {{ $project->kategori }} · {{ $project->tahun }}
-                </p>
-                <p style="font-family:var(--font-serif);font-size:1.5rem;font-weight:300;">{{ $project->title }}</p>
-                @if($project->client)
-                <p style="font-size:0.75rem;color:rgba(232,228,222,0.65);margin-top:0.3rem;">Klien: {{ $project->client }}</p>
-                @endif
-            </div>
         </a>
         @endforeach
     </div>
