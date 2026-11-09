@@ -1,7 +1,7 @@
 {
   "version": 2,
   "framework": null,
-  "buildCommand": "",
+  "buildCommand": "composer install --no-dev --optimize-autoloader",
   "outputDirectory": "public",
   "functions": {
     "api/index.php": {
@@ -10,14 +10,13 @@
   },
   "routes": [
     { "src": "/build/(.*)", "dest": "/public/build/$1" },
-    { "src": "/storage/(.*)", "dest": "/storage/app/public/$1" },
+    { "src": "/storage/(.*)", "dest": "/api/index.php" },
     { "src": "/(.*\\.(?:css|js|png|jpg|jpeg|gif|svg|ico|ttf|woff|woff2|eot|otf|webp|avif|txt|webmanifest|pdf))$", "dest": "/public/$1" },
     { "src": "/(.*)", "dest": "/api/index.php" }
   ],
   "env": {
     "APP_ENV": "production",
     "APP_DEBUG": "false",
-    "APP_KEY": "base64:kxwIiV44J2nULVYrtyCgfIHssx8yrblvdqE+PyMmfxQ=",
     "APP_URL": "https://ghiyas.vercel.app",
     "APP_CONFIG_CACHE": "/tmp/config.php",
     "APP_EVENTS_CACHE": "/tmp/events.php",
