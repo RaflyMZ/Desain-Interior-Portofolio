@@ -15,7 +15,9 @@ class DatabaseSeeder extends Seeder
 {
     public function run(): void
     {
-        DB::statement('SET FOREIGN_KEY_CHECKS=0');
+        if (DB::connection()->getDriverName() === 'mysql') {
+            DB::statement('SET FOREIGN_KEY_CHECKS=0');
+        }
 
         // ─── Profil ─────────────────────────────
         Profile::truncate();
@@ -102,21 +104,21 @@ class DatabaseSeeder extends Seeder
                 'deskripsi'   => "Proyek ini merupakan perancangan interior pada hotel bisnis di Sukabumi yang mencakup guest room — kamar tidur dan walk-in closet — serta fasilitas MICE berupa prefunction area dan ballroom. Perancangan dipadukan dengan identitas lokal pesisir Sukabumi melalui interpretasi motif Batik Gurilaps, sehingga menghasilkan desain yang fungsional, elegan, dan memperkuat karakter tempat.",
                 'client'      => null,
                 'tahun'       => 2025,
-                'cover_image' => 'Projek/ballroom.png',
+                'cover_image' => 'images/projects/hotel-bisnis/ballroom.png',
                 'urutan'      => 3,
                 'media'       => [
                     [
-                        'path'      => 'Projek/walk-in-closet.png',
+                        'path'      => 'images/projects/hotel-bisnis/walk-in-closet.png',
                         'caption'   => 'Walk-in Closet — Dark Contemporary',
                         'deskripsi' => "Desain walk-in closet ini mengusung konsep Dark Contemporary yang menonjolkan kesan elegan, eksklusif, dan maskulin melalui perpaduan warna gelap, material bertekstur, serta pencahayaan yang terarah.\n\nDominasi warna cokelat tua dan hitam pada panel dinding serta furnitur menciptakan karakter ruang yang kuat dan intim. Sentuhan tekstur kayu pada lantai memberikan keseimbangan visual, sementara penggunaan material kaca pada kabinet menghadirkan kesan modern sekaligus memperlihatkan koleksi pakaian secara terorganisasi.\n\nPencahayaan aksen pada dinding dan pencahayaan tersembunyi pada area display menjadi elemen utama dalam membangun suasana ruang. Kontras antara cahaya hangat dan permukaan gelap mempertegas detail material serta menciptakan kedalaman visual tanpa menghilangkan kesan minimalis.\n\nTata letak ruang dirancang dengan pendekatan fungsional melalui integrasi area penyimpanan tertutup dan display terbuka. Hasilnya adalah walk-in closet yang tidak hanya berfungsi sebagai area penyimpanan, tetapi juga menghadirkan pengalaman ruang yang personal, rapi, dan berkelas.",
                     ],
                     [
-                        'path'      => 'Projek/prefunction-area.png',
+                        'path'      => 'images/projects/hotel-bisnis/prefunction-area.png',
                         'caption'   => 'Prefunction Area — Konsep Rimba',
                         'deskripsi' => "Area prefunction mengusung pendekatan Sense of Place dengan tema Rimba, terinspirasi dari kekayaan alam dan vegetasi Sukabumi. Karakter ini diwujudkan melalui material kayu, warna alami, tekstur organik, serta interpretasi Batik Gurilaps untuk memperkuat identitas lokal dalam balutan desain modern dan elegan.\n\nPenataan furnitur fleksibel, sirkulasi terorganisasi, pencahayaan, dan dukungan teknologi dirancang untuk menunjang kenyamanan serta fungsi ruang sebagai area transisi menuju ballroom.",
                     ],
                     [
-                        'path'      => 'Projek/ballroom.png',
+                        'path'      => 'images/projects/hotel-bisnis/ballroom.png',
                         'caption'   => 'Ballroom — Konsep Laut',
                         'deskripsi' => "Ballroom mengusung pendekatan Sense of Place dengan tema Laut, terinspirasi dari karakter pesisir Sukabumi. Identitas lokal diterapkan melalui interpretasi motif Batik Gurilaps dan elemen visual yang terinspirasi dari pergerakan air serta perjalanan penyu menuju laut, dalam balutan desain modern dan elegan.\n\nUntuk menunjang kebutuhan MICE, ruang dirancang fleksibel melalui penggunaan partisi otomatis, pencahayaan yang dapat disesuaikan, sistem tata udara, dan elemen akustik guna meningkatkan kenyamanan serta kualitas kegiatan.",
                     ],
@@ -129,11 +131,11 @@ class DatabaseSeeder extends Seeder
                 'deskripsi'   => "Perancangan interior hunian modern dengan konsep Dasyid House yang menekankan kesederhanaan, fungsi, dan keseimbangan antara ruang interior maupun exterior. Desain ini dirancang untuk menciptakan suasana hunian yang nyaman, sejuk, dan harmonis bagi penghuninya.",
                 'client'      => null,
                 'tahun'       => 2025,
-                'cover_image' => 'Projek/kamar-tidur.png',
+                'cover_image' => 'images/projects/dasyid-house/kamar-tidur.png',
                 'urutan'      => 1,
                 'media'       => [
                     [
-                        'path'      => 'Projek/kamar-tidur.png',
+                        'path'      => 'images/projects/dasyid-house/kamar-tidur.png',
                         'caption'   => 'Master Bedroom — Skandinavian',
                         'deskripsi' => "Desain kamar tidur ini menggunakan konsep Skandinavian yang memungkinkan fungsionalitas, kesederhanaan, material kayu alami, serta palet warna netral untuk menyediakan suasana kamar tidur yang bersih dan menyederhanakan. Penggunaan furnitur dengan bentuk sederhana dan garis yang bersih memungkinkan karakter Skandinavian, sementara lemari built-in dan rak terbuka dirancang untuk mengoptimalkan penggunaan ruang tanpa mengganggu estetika. Elemen panel kayu pada area tempat tidur memberikan kesan hangat, sementara tekstur material memberikan elemen fungsional untuk kebutuhan penyimpanan tanpa mengganggu kemegahan ruang. Pencahayaan difusikan sebagai alat untuk menciptakan suasana pagi yang lebih segar, tenang, dan harmonis.",
                     ],
@@ -146,26 +148,26 @@ class DatabaseSeeder extends Seeder
                 'deskripsi'   => "Pengembangan desain ini merupakan bagian dari kelanjutan proyek interior di VEINELAB, dengan revisi pada detail, komposisi warna, dan elemen furnitur untuk menyelaraskan kebutuhan serta preferensi klien. Konsep modern dipadu dengan sentuhan material kayu untuk menghasilkan suasana ruang yang hangat, modern, dan segar. Penggunaan warna lembut pada dinding, plafon, dan lantai, serta ruang makanan dan ruang keluar saling terhubung dengan harmonis. Setiap elemen furniture direncanakan berdasarkan kebutuhan pengguna, menciptakan kenyamanan serta efisiensi ruang. Hasil revisi kemudian divisualisasikan dalam bentuk render untuk diajukan kepada klien sebagai bahan evaluasi dan pengembangan desain lebih lanjut.",
                 'client'      => null,
                 'tahun'       => 2025,
-                'cover_image' => 'Projek Porto/Mr.O kitchen Set/Enscape_2026-03-22-22-43-02_P5.jpg',
+                'cover_image' => 'images/projects/kitchen-set-mr-o/Enscape_2026-03-22-22-43-02_P5.jpg',
                 'urutan'      => 2,
                 'media'       => [
                     [
-                        'path'      => 'Projek Porto/Mr.O kitchen Set/Enscape_2026-03-22-22-43-02_P5.jpg',
+                        'path'      => 'images/projects/kitchen-set-mr-o/Enscape_2026-03-22-22-43-02_P5.jpg',
                         'caption'   => 'Kitchen Set Mr. O — Tampilan Utama',
                         'deskripsi' => "Render utama Kitchen Set Mr. O dengan konsep modern kayu.",
                     ],
                     [
-                        'path'      => 'Projek Porto/Mr.O kitchen Set/Enscape_2026-03-13-14-03-44.jpg',
+                        'path'      => 'images/projects/kitchen-set-mr-o/Enscape_2026-03-13-14-03-44.jpg',
                         'caption'   => 'Kitchen Set Mr. O — Detail Dapur',
                         'deskripsi' => "Detail perancangan dapur dan elemen furnitur Kitchen Set Mr. O.",
                     ],
                     [
-                        'path'      => 'Projek Porto/Mr.O kitchen Set/Enscape_2026-03-14-20-58-11.jpg',
+                        'path'      => 'images/projects/kitchen-set-mr-o/Enscape_2026-03-14-20-58-11.jpg',
                         'caption'   => 'Kitchen Set Mr. O — Ruang Makan',
                         'deskripsi' => "Tampilan ruang makanan yang terintegrasi dengan konsep Kitchen Set Mr. O.",
                     ],
                     [
-                        'path'      => 'Projek Porto/Mr.O kitchen Set/Enscape_2026-03-17-17-06-23 (1).jpg',
+                        'path'      => 'images/projects/kitchen-set-mr-o/Enscape_2026-03-17-17-06-23 (1).jpg',
                         'caption'   => 'Kitchen Set Mr. O — Sudut Ruangan',
                         'deskripsi' => "Sudut ruangan dan detail pencahayaan pada Kitchen Set Mr. O.",
                     ],
@@ -236,6 +238,8 @@ class DatabaseSeeder extends Seeder
             }
         }
 
-        DB::statement('SET FOREIGN_KEY_CHECKS=1');
+        if (DB::connection()->getDriverName() === 'mysql') {
+            DB::statement('SET FOREIGN_KEY_CHECKS=1');
+        }
     }
 }
