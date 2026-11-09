@@ -3,6 +3,7 @@ set -e
 
 PORT="${PORT:-10000}"
 export PORT
+echo "Listen ${PORT}" > /etc/apache2/ports.conf
 
 mkdir -p /tmp/views /tmp/bootstrap/cache
 chown -R www-data:www-data /tmp/views /tmp/bootstrap/cache 2>/dev/null || true

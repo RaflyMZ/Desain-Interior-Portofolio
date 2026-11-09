@@ -14,10 +14,10 @@ COPY --from=composer:2 /usr/bin/composer /usr/bin/composer
 
 WORKDIR /var/www/html
 
-# Apache: serve Laravel public/ and listen on Render's $PORT
-RUN sed -ri 's!/var/www/html!/var/www/html/public!g' /etc/apache2/sites-available/000-default.conf /etc/apache2/apache2.conf \
- && echo 'Listen ${PORT}' > /etc/apache2/ports.conf \
- && printf '<Directory /var/www/html/public>\n  AllowOverride All\n  Require all granted\n</Directory>\n' >> /etc/apache2/apache2.conf
+# Apache: serve Laravel public/ (PORT is set at runtime by entrypoint)
+RUN printf '<VirtualHost *:80>\n  ServerName localhost\n  DocumentRoot /var/www/html/public\n  <Directory /var/www/html/public>\n    AllowOverride All\n    Require all granted\n    Options -Indexes +FollowSymLinks\n  </Directory>\n  ErrorLog ${APACHE_LOG_DIR}/error.log\n  CustomLog ${APACHE_LOG_DIR}/access.log combined\n</VirtualHost>\n' > /etc/apache2/sites-available/000-default.conf \
+ && echo 'ServerName localhost' >> /etc/apache2/apache2.conf \
+ && echo 'Listen 80' > /etc/apache2/ports.conf
 
 COPY . .
 
