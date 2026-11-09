@@ -14,6 +14,8 @@ class ProjectMedia extends Model
         'path_or_url',
         'credit_name',
         'credit_url',
+        'caption',
+        'deskripsi',
         'order',
     ];
 

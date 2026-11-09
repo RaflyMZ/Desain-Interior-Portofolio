@@ -9,11 +9,14 @@ use App\Models\Profile;
 use App\Models\Project;
 use App\Models\ProjectMedia;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class DatabaseSeeder extends Seeder
 {
     public function run(): void
     {
+        DB::statement('SET FOREIGN_KEY_CHECKS=0');
+
         // ─── Profil ─────────────────────────────
         Profile::truncate();
         Profile::create([
@@ -93,105 +96,124 @@ class DatabaseSeeder extends Seeder
 
         $projects = [
             [
-                'slug'        => 'area-bisnis-hotel-bintang-4',
-                'title'       => 'Area Bisnis Hotel Bintang 4',
+                'slug'        => 'hotel-bisnis',
+                'title'       => 'Hotel Bisnis',
                 'kategori'    => 'Hospitality',
-                'deskripsi'   => 'Desain area bisnis terpadu pada hotel bintang 4, mencakup executive business lounge, ruang rapat eksklusif (boardroom), dan co-working hub. Konsep memadukan estetika modern kontemporer dengan sentuhan material alami bernuansa hangat—panel kayu akustik, pencahayaan arsitektural tersembunyi (warm ambient lighting), dan furnitur ergonomis mewah—untuk menciptakan suasana kerja yang produktif, elegan, dan prestisius bagi para tamu bisnis.',
-                'client'      => 'Grand Horizon Hotel & Resort',
-                'tahun'       => 2024,
-                'cover_image' => 'images/projects/hotel-business-lounge/0_6aa27c9faab3a.jpg',
-                'urutan'      => 1,
-                'media'       => [
-                    'images/projects/hotel-business-lounge/0_6aa27c9faab3a.jpg',
-                    'images/projects/hotel-business-lounge/1_6aa27ca03aa7a.jpg',
-                    'images/projects/hotel-business-lounge/2_6aa27ca0c20c9.jpg',
-                    'images/projects/modern-boardroom-meeting-room/4_6aa27eb9370fe.jpg',
-                    'images/projects/modern-boardroom-meeting-room/5_6aa27ebac6b2c.jpg',
-                ],
-            ],
-            [
-                'slug'        => 'kamar-dan-lobby-hotel-bintang-3',
-                'title'       => 'Kamar & Lobby Hotel Bintang 3',
-                'kategori'    => 'Hospitality',
-                'deskripsi'   => 'Pengembangan interior terintegrasi untuk lobby utama dan kamar tamu (deluxe & standard guest room) pada hotel bintang 3 berkonsep urban modern. Menghadirkan welcoming experience yang hangat pada area lobby melalui reception desk beraksen pencahayaan dinamis dan seating area yang nyaman, serta tata ruang kamar yang efisien, menenangkan, dan fungsional dengan palet warna earthy tones dan furnitur modular custom.',
-                'client'      => 'The Urban Haven Hotel',
-                'tahun'       => 2023,
-                'cover_image' => 'images/projects/hotel-lobby-modern-interior/1_6aa27ecd7a1cf.jpg',
-                'urutan'      => 2,
-                'media'       => [
-                    'images/projects/hotel-lobby-modern-interior/1_6aa27ecd7a1cf.jpg',
-                    'images/projects/hotel-lobby-modern-interior/2_6aa27edac6bb9.jpg',
-                    'images/projects/hotel-lobby-modern-interior/3_6aa27ee851980.jpg',
-                    'images/projects/modern-hotel-bedroom-interior/4_6aa27f1cba0b1.jpg',
-                    'images/projects/modern-hotel-bedroom-interior/5_6aa27f1d977c2.jpg',
-                    'images/projects/modern-hotel-bedroom-interior/6_6aa27f1e2dc4f.jpg',
-                ],
-            ],
-            [
-                'slug'        => 'minimalist-residential-living-room',
-                'title'       => 'Minimalist Residential Living Room',
-                'kategori'    => 'Residential',
-                'deskripsi'   => 'Perancangan ruang keluarga bernuansa minimalis modern dengan pencahayaan alami optimal, material kayu alami hangat, dan tata letak yang lapang untuk menciptakan atmosfer relaksasi bagi keluarga.',
-                'client'      => 'Private Residence',
-                'tahun'       => 2024,
-                'cover_image' => 'images/projects/minimalist-residential-living-room-interior/1_6a8d995a9afab.jpg',
+                'deskripsi'   => "Proyek ini merupakan perancangan interior pada hotel bisnis di Sukabumi yang mencakup guest room — kamar tidur dan walk-in closet — serta fasilitas MICE berupa prefunction area dan ballroom. Perancangan dipadukan dengan identitas lokal pesisir Sukabumi melalui interpretasi motif Batik Gurilaps, sehingga menghasilkan desain yang fungsional, elegan, dan memperkuat karakter tempat.",
+                'client'      => null,
+                'tahun'       => 2025,
+                'cover_image' => 'Projek/ballroom.png',
                 'urutan'      => 3,
                 'media'       => [
-                    'images/projects/minimalist-residential-living-room-interior/1_6a8d995a9afab.jpg',
-                    'images/projects/minimalist-residential-living-room-interior/2_6a8d995b043d0.jpg',
-                    'images/projects/minimalist-residential-living-room-interior/3_6a8d995b479d8.jpg',
-                    'images/projects/minimalist-residential-living-room-interior/4_6a8d995b7e657.jpg',
-                    'images/projects/minimalist-residential-living-room-interior/5_6a8d995bc82e9.jpg',
+                    [
+                        'path'      => 'Projek/walk-in-closet.png',
+                        'caption'   => 'Walk-in Closet — Dark Contemporary',
+                        'deskripsi' => "Desain walk-in closet ini mengusung konsep Dark Contemporary yang menonjolkan kesan elegan, eksklusif, dan maskulin melalui perpaduan warna gelap, material bertekstur, serta pencahayaan yang terarah.\n\nDominasi warna cokelat tua dan hitam pada panel dinding serta furnitur menciptakan karakter ruang yang kuat dan intim. Sentuhan tekstur kayu pada lantai memberikan keseimbangan visual, sementara penggunaan material kaca pada kabinet menghadirkan kesan modern sekaligus memperlihatkan koleksi pakaian secara terorganisasi.\n\nPencahayaan aksen pada dinding dan pencahayaan tersembunyi pada area display menjadi elemen utama dalam membangun suasana ruang. Kontras antara cahaya hangat dan permukaan gelap mempertegas detail material serta menciptakan kedalaman visual tanpa menghilangkan kesan minimalis.\n\nTata letak ruang dirancang dengan pendekatan fungsional melalui integrasi area penyimpanan tertutup dan display terbuka. Hasilnya adalah walk-in closet yang tidak hanya berfungsi sebagai area penyimpanan, tetapi juga menghadirkan pengalaman ruang yang personal, rapi, dan berkelas.",
+                    ],
+                    [
+                        'path'      => 'Projek/prefunction-area.png',
+                        'caption'   => 'Prefunction Area — Konsep Rimba',
+                        'deskripsi' => "Area prefunction mengusung pendekatan Sense of Place dengan tema Rimba, terinspirasi dari kekayaan alam dan vegetasi Sukabumi. Karakter ini diwujudkan melalui material kayu, warna alami, tekstur organik, serta interpretasi Batik Gurilaps untuk memperkuat identitas lokal dalam balutan desain modern dan elegan.\n\nPenataan furnitur fleksibel, sirkulasi terorganisasi, pencahayaan, dan dukungan teknologi dirancang untuk menunjang kenyamanan serta fungsi ruang sebagai area transisi menuju ballroom.",
+                    ],
+                    [
+                        'path'      => 'Projek/ballroom.png',
+                        'caption'   => 'Ballroom — Konsep Laut',
+                        'deskripsi' => "Ballroom mengusung pendekatan Sense of Place dengan tema Laut, terinspirasi dari karakter pesisir Sukabumi. Identitas lokal diterapkan melalui interpretasi motif Batik Gurilaps dan elemen visual yang terinspirasi dari pergerakan air serta perjalanan penyu menuju laut, dalam balutan desain modern dan elegan.\n\nUntuk menunjang kebutuhan MICE, ruang dirancang fleksibel melalui penggunaan partisi otomatis, pencahayaan yang dapat disesuaikan, sistem tata udara, dan elemen akustik guna meningkatkan kenyamanan serta kualitas kegiatan.",
+                    ],
                 ],
             ],
             [
-                'slug'        => 'luxury-penthouse-suite',
-                'title'       => 'Luxury Penthouse Suite',
+                'slug'        => 'dasyid-house',
+                'title'       => 'Dasyid House',
                 'kategori'    => 'Residential',
-                'deskripsi'   => 'Konsep interior penthouse modern mewah dengan pemandangan panorama kota, material marmer premium, aksen metalik elegan, dan integrasi pencahayaan ambient untuk menciptakan kemewahan kontemporer.',
-                'client'      => 'Skyline Residences',
-                'tahun'       => 2024,
-                'cover_image' => 'images/projects/luxury-penthouse-interior-design/1_6a8d61929f6d9.jpg',
-                'urutan'      => 4,
+                'deskripsi'   => "Perancangan interior hunian modern dengan konsep Dasyid House yang menekankan kesederhanaan, fungsi, dan keseimbangan antara ruang interior maupun exterior. Desain ini dirancang untuk menciptakan suasana hunian yang nyaman, sejuk, dan harmonis bagi penghuninya.",
+                'client'      => null,
+                'tahun'       => 2025,
+                'cover_image' => 'Projek/kamar-tidur.png',
+                'urutan'      => 1,
                 'media'       => [
-                    'images/projects/luxury-penthouse-interior-design/1_6a8d61929f6d9.jpg',
-                    'images/projects/luxury-penthouse-interior-design/2_6a8d61933692b.jpg',
-                    'images/projects/luxury-penthouse-interior-design/3_6a8d6193a0877.jpg',
-                    'images/projects/luxury-penthouse-interior-design/4_6a8d619405bf7.jpg',
-                    'images/projects/luxury-penthouse-interior-design/5_6a8d6194684b4.jpg',
+                    [
+                        'path'      => 'Projek/kamar-tidur.png',
+                        'caption'   => 'Master Bedroom — Skandinavian',
+                        'deskripsi' => "Desain kamar tidur ini menggunakan konsep Skandinavian yang memungkinkan fungsionalitas, kesederhanaan, material kayu alami, serta palet warna netral untuk menyediakan suasana kamar tidur yang bersih dan menyederhanakan. Penggunaan furnitur dengan bentuk sederhana dan garis yang bersih memungkinkan karakter Skandinavian, sementara lemari built-in dan rak terbuka dirancang untuk mengoptimalkan penggunaan ruang tanpa mengganggu estetika. Elemen panel kayu pada area tempat tidur memberikan kesan hangat, sementara tekstur material memberikan elemen fungsional untuk kebutuhan penyimpanan tanpa mengganggu kemegahan ruang. Pencahayaan difusikan sebagai alat untuk menciptakan suasana pagi yang lebih segar, tenang, dan harmonis.",
+                    ],
                 ],
             ],
             [
-                'slug'        => 'bamboo-sanctuary-restaurant',
-                'title'       => 'Bamboo Sanctuary Restaurant',
-                'kategori'    => 'Commercial',
-                'deskripsi'   => 'Desain restoran berkonsep arsitektur biofilik memadukan elemen bambu artisanal, pencahayaan temaram hangat, dan tanaman indoor untuk pengalaman bersantap yang menenangkan dan autentik.',
-                'client'      => 'Sanctuary Dining Group',
-                'tahun'       => 2023,
-                'cover_image' => 'images/projects/restaurant-interior-bamboo/1_6a8d61d3252b5.jpg',
+                'slug'        => 'kitchen-set-mr-o',
+                'title'       => 'Kitchen Set Mr. O',
+                'kategori'    => 'Residential',
+                'deskripsi'   => "Pengembangan desain ini merupakan bagian dari kelanjutan proyek interior di VEINELAB, dengan revisi pada detail, komposisi warna, dan elemen furnitur untuk menyelaraskan kebutuhan serta preferensi klien. Konsep modern dipadu dengan sentuhan material kayu untuk menghasilkan suasana ruang yang hangat, modern, dan segar. Penggunaan warna lembut pada dinding, plafon, dan lantai, serta ruang makanan dan ruang keluar saling terhubung dengan harmonis. Setiap elemen furniture direncanakan berdasarkan kebutuhan pengguna, menciptakan kenyamanan serta efisiensi ruang. Hasil revisi kemudian divisualisasikan dalam bentuk render untuk diajukan kepada klien sebagai bahan evaluasi dan pengembangan desain lebih lanjut.",
+                'client'      => null,
+                'tahun'       => 2025,
+                'cover_image' => 'Projek Porto/Mr.O kitchen Set/Enscape_2026-03-22-22-43-02_P5.jpg',
+                'urutan'      => 2,
+                'media'       => [
+                    [
+                        'path'      => 'Projek Porto/Mr.O kitchen Set/Enscape_2026-03-22-22-43-02_P5.jpg',
+                        'caption'   => 'Kitchen Set Mr. O — Tampilan Utama',
+                        'deskripsi' => "Render utama Kitchen Set Mr. O dengan konsep modern kayu.",
+                    ],
+                    [
+                        'path'      => 'Projek Porto/Mr.O kitchen Set/Enscape_2026-03-13-14-03-44.jpg',
+                        'caption'   => 'Kitchen Set Mr. O — Detail Dapur',
+                        'deskripsi' => "Detail perancangan dapur dan elemen furnitur Kitchen Set Mr. O.",
+                    ],
+                    [
+                        'path'      => 'Projek Porto/Mr.O kitchen Set/Enscape_2026-03-14-20-58-11.jpg',
+                        'caption'   => 'Kitchen Set Mr. O — Ruang Makan',
+                        'deskripsi' => "Tampilan ruang makanan yang terintegrasi dengan konsep Kitchen Set Mr. O.",
+                    ],
+                    [
+                        'path'      => 'Projek Porto/Mr.O kitchen Set/Enscape_2026-03-17-17-06-23 (1).jpg',
+                        'caption'   => 'Kitchen Set Mr. O — Sudut Ruangan',
+                        'deskripsi' => "Sudut ruangan dan detail pencahayaan pada Kitchen Set Mr. O.",
+                    ],
+                ],
+            ],
+            [
+                'slug'        => 'house-mr-s',
+                'title'       => 'House Mr. S',
+                'kategori'    => 'Residential',
+                'deskripsi'   => "Perancangan interior hunian untuk klien pribadi dengan identitas House Mr. S. Konsep desain menyajikan ruang hunian yang nyaman, fungsional, dan harmonis dengan sentuhan personal yang mencerminkan karakter pemilik, melalui tata letak ruang yang efisien dan pilihan material yang berkualitas.",
+                'client'      => null,
+                'tahun'       => 2025,
+                'cover_image' => null,
                 'urutan'      => 5,
-                'media'       => [
-                    'images/projects/restaurant-interior-bamboo/1_6a8d61d3252b5.jpg',
-                    'images/projects/restaurant-interior-bamboo/2_6a8d61d4830cb.jpg',
-                    'images/projects/restaurant-interior-bamboo/3_6a8d61d632480.jpg',
-                    'images/projects/restaurant-interior-bamboo/4_6a8d61d7a50a1.jpg',
-                ],
+                'media'       => [],
             ],
             [
-                'slug'        => 'creative-studio-modern-office',
-                'title'       => 'Creative Studio & Workspace',
-                'kategori'    => 'Commercial',
-                'deskripsi'   => 'Desain ruang kerja kolaboratif dengan konsep open space ergonomis, meeting pods kedap suara, dan area breakout kreatif untuk meningkatkan produktivitas dan kenyamanan kerja tim.',
-                'client'      => 'Innova Creative Hub',
-                'tahun'       => 2023,
-                'cover_image' => 'images/projects/modern-office-interior/1_6a8d614ac20e9.jpg',
+                'slug'        => 'kitchen-set-mr-l',
+                'title'       => 'Kitchen Set Mr. L',
+                'kategori'    => 'Residential',
+                'deskripsi'   => "Perancangan interior dapur untuk klien pribadi dengan identitas Kitchen Set Mr. L. Konsep desain dirancang untuk mengoptimalkan fungsi dapur dengan tata letak yang ergonomis, kombinasi material yang cocok, serta sentuhan estetika yang mencerminkan gaya hidup pemilik hunian.",
+                'client'      => null,
+                'tahun'       => 2025,
+                'cover_image' => null,
                 'urutan'      => 6,
-                'media'       => [
-                    'images/projects/modern-office-interior/1_6a8d614ac20e9.jpg',
-                    'images/projects/modern-office-interior/2_6a8d614b9bcfb.jpg',
-                    'images/projects/modern-office-interior/3_6a8d614c2ef3e.jpg',
-                    'images/projects/modern-office-interior/4_6a8d614c91d10.jpg',
-                ],
+                'media'       => [],
+            ],
+            [
+                'slug'        => 'house-mr-a',
+                'title'       => 'House Mr. A',
+                'kategori'    => 'Residential',
+                'deskripsi'   => "Perancangan interior hunian untuk klien pribadi dengan identitas House Mr. A. Konsep desain menciptakan suasana hunian yang modern, nyaman, dan sejuk dengan perhatian pada tata letak ruang, pencahayaan, serta pilihan material yang mendukung kenyamanan penghuni sehari-hari.",
+                'client'      => null,
+                'tahun'       => 2025,
+                'cover_image' => null,
+                'urutan'      => 7,
+                'media'       => [],
+            ],
+            [
+                'slug'        => 'project-internship',
+                'title'       => 'Project Internship',
+                'kategori'    => 'Internship',
+                'deskripsi'   => "Kumpulan hasil pekerjaan dan visualisasi 3D yang dihasilkan selama program magang (internship) di bidang desain interior. Meliputi berbagai proses dari pengembangan konsep, pemodelan 3D, hingga rendering interior untuk berbagai tipe ruang.",
+                'client'      => null,
+                'tahun'       => 2025,
+                'cover_image' => null,
+                'urutan'      => 4,
+                'media'       => [],
             ],
         ];
 
@@ -201,15 +223,19 @@ class DatabaseSeeder extends Seeder
 
             $project = Project::create($data);
 
-            foreach ($mediaList as $order => $mediaPath) {
+            foreach ($mediaList as $order => $media) {
                 ProjectMedia::create([
                     'project_id'  => $project->id,
                     'type'        => 'image',
                     'source'      => 'client',
-                    'path_or_url' => $mediaPath,
+                    'path_or_url' => $media['path'],
+                    'caption'     => $media['caption'] ?? null,
+                    'deskripsi'   => $media['deskripsi'] ?? null,
                     'order'       => $order,
                 ]);
             }
         }
+
+        DB::statement('SET FOREIGN_KEY_CHECKS=1');
     }
 }

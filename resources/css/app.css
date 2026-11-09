@@ -1,13 +1,13 @@
 /* Google Fonts di-load via <link> di layout HTML, bukan @import di sini */
 
-/* ─── CSS Variables ─────────────────────────────── */
+/* â”€â”€â”€ CSS Variables â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 :root {
     --color-bg:        #0e0e0e;
     --color-surface:   #161616;
     --color-border:    #2a2a2a;
     --color-text:      #e8e4de;
     --color-muted:     #7a7570;
-    --color-accent:    #c8aa82;       /* warm gold — desain interior */
+    --color-accent:    #c8aa82;       /* warm gold â€” desain interior */
     --color-accent-dim:#8a7258;
 
     --font-serif:      'Cormorant Garamond', Georgia, serif;
@@ -17,7 +17,7 @@
     --transition-page: 500ms ease;
 }
 
-/* ─── Reset & Base ───────────────────────────────── */
+/* â”€â”€â”€ Reset & Base â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 html {
@@ -43,7 +43,7 @@ a {
     transition: color 0.25s;
 }
 
-/* ─── Typography ─────────────────────────────────── */
+/* â”€â”€â”€ Typography â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .font-serif  { font-family: var(--font-serif); }
 .font-sans   { font-family: var(--font-sans); }
 
@@ -54,7 +54,7 @@ h1, h2, h3 {
     letter-spacing: 0.02em;
 }
 
-/* ─── Navbar ─────────────────────────────────────── */
+/* â”€â”€â”€ Navbar â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .navbar {
     position: fixed;
     top: 0; left: 0; right: 0;
@@ -118,13 +118,13 @@ h1, h2, h3 {
     width: 100%;
 }
 
-/* ─── Page wrapper ───────────────────────────────── */
+/* â”€â”€â”€ Page wrapper â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .page-wrapper {
     padding-top: var(--nav-h);
     min-height: 100dvh;
 }
 
-/* ─── Section helpers ────────────────────────────── */
+/* â”€â”€â”€ Section helpers â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .section {
     padding: 6rem 3rem;
     max-width: 1400px;
@@ -136,7 +136,7 @@ h1, h2, h3 {
     max-width: none;
 }
 
-/* ─── Grid foto proyek (homepage) ────────────────── */
+/* â”€â”€â”€ Grid foto proyek (homepage) â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .project-grid {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
@@ -175,7 +175,7 @@ h1, h2, h3 {
     opacity: 1;
 }
 
-/* ─── Button ─────────────────────────────────────── */
+/* â”€â”€â”€ Button â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .btn {
     display: inline-block;
     padding: 0.75rem 2rem;
@@ -195,7 +195,7 @@ h1, h2, h3 {
     color: var(--color-bg);
 }
 
-/* ─── Unsplash credit badge ──────────────────────── */
+/* â”€â”€â”€ Unsplash credit badge â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .unsplash-credit {
     font-size: 0.65rem;
     color: var(--color-muted);
@@ -212,7 +212,7 @@ h1, h2, h3 {
     color: var(--color-text);
 }
 
-/* ─── Timeline (Experience) ──────────────────────── */
+/* â”€â”€â”€ Timeline (Experience) â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .timeline {
     position: relative;
     padding-left: 2rem;
@@ -260,7 +260,7 @@ h1, h2, h3 {
     margin-bottom: 0.75rem;
 }
 
-/* ─── Experience Detail & Gallery ─────────────────── */
+/* â”€â”€â”€ Experience Detail & Gallery â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .timeline__detail-box {
     margin-top: 1.75rem;
     padding: 2.25rem;
@@ -353,7 +353,7 @@ h1, h2, h3 {
     line-height: 1.5;
 }
 
-/* ─── Form (Contact) ─────────────────────────────── */
+/* â”€â”€â”€ Form (Contact) â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .form-group {
     margin-bottom: 1.5rem;
 }
@@ -389,10 +389,10 @@ h1, h2, h3 {
 
 .form-textarea { resize: vertical; min-height: 120px; }
 
-/* ─── Page transition (Livewire navigate) ────────── */
+/* â”€â”€â”€ Page transition (Livewire navigate) â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 [wire\:loading\.class] { /* utility placeholder */ }
 
-/* ─── Mobile Navigation Styles ─────────────────── */
+/* â”€â”€â”€ Mobile Navigation Styles â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .navbar__mobile-toggle {
     display: none;
     background: transparent;
@@ -491,3 +491,21 @@ h1, h2, h3 {
     .section { padding: 3rem 1.25rem; }
 }
 
+
+/* --- Kartu proyek (halaman index proyek) --- */
+.project-card img {
+    filter: brightness(0.8) saturate(0.95);
+}
+.project-card:hover,
+.project-card:focus {
+    border-color: var(--color-accent);
+    transform: translateY(-4px);
+}
+.project-card:hover img,
+.project-card:focus img {
+    filter: brightness(1) saturate(1);
+    transform: scale(1.04);
+}
+.project-card:hover .project-card__arrow {
+    transform: translateX(6px);
+}

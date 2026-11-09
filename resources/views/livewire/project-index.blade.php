@@ -26,22 +26,36 @@
         </div>
     </div>
 
-    {{-- Grid proyek --}}
+    {{-- Grid proyek: kartu besar --}}
     @if($projects->count())
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 540px), 1fr)); gap: 4px; padding: 0 4px;">
+    <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(420px, 1fr)); gap: 2rem; padding: 0 3rem 4rem; max-width: 1400px; margin: 0 auto;">
         @foreach($projects as $project)
         <a href="{{ route('proyek.show', $project->slug) }}" wire:navigate
-           class="project-grid__item"
-           style="aspect-ratio: 16/11;"
+           class="project-card"
+           style="position: relative; display: flex; flex-direction: column; overflow: hidden; background: var(--color-surface); border: 1px solid var(--color-border); transition: border-color 0.3s ease, transform 0.3s ease;"
            data-aos="fade-up"
-           data-aos-delay="{{ $loop->index * 150 }}">
-            @if($project->cover_image)
-                <img src="{{ Storage::url($project->cover_image) }}" alt="{{ $project->title }}" style="width:100%;height:100%;object-fit:cover;">
-            @else
-                <div style="width:100%;height:100%;background:var(--color-surface);display:flex;align-items:center;justify-content:center;">
-                    <span style="color:var(--color-muted);font-size:0.75rem;letter-spacing:0.1em;">{{ strtoupper($project->kategori ?? 'Hospitality') }}</span>
-                </div>
-            @endif
+           data-aos-delay="{{ $loop->index * 100 }}">
+            {{-- Gambar --}}
+            <div style="position: relative; aspect-ratio: 16/10; overflow: hidden;">
+                @if($project->cover_image)
+                    <img src="{{ Storage::url($project->cover_image) }}" alt="{{ $project->title }}"
+                         style="width: 100%; height: 100%; display: block; object-fit: cover; transition: transform 0.7s ease, filter 0.35s ease;">
+                @else
+                    <div style="width: 100%; height: 100%; background: var(--color-border);"></div>
+                @endif
+                {{-- Overlay label di atas gambar --}}
+                <span style="position: absolute; top: 1rem; left: 1rem; font-size: 0.6rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--color-accent); background: rgba(14,14,14,0.75); padding: 0.45rem 0.9rem;">
+                    {{ $project->kategori }} · {{ $project->tahun }}
+                </span>
+            </div>
+
+            {{-- Info kartu --}}
+            <span style="display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 1.5rem 1.7rem;">
+                <span style="font-family: var(--font-serif); font-size: 1.7rem; font-weight: 400; line-height: 1.25; color: var(--color-text);">
+                    {{ $project->title }}
+                </span>
+                <span class="project-card__arrow" aria-hidden="true" style="font-size: 1.4rem; color: var(--color-accent); transition: transform 0.3s ease; flex-shrink: 0;">→</span>
+            </span>
         </a>
         @endforeach
     </div>
