@@ -1,0 +1,48 @@
+services:
+  - type: web
+    name: desain-interior-ghiyas
+    runtime: docker
+    plan: free
+    autoDeploy: true
+    healthCheckPath: /up
+    envVars:
+      - key: APP_NAME
+        value: "Portofolio Desain Interior"
+      - key: APP_ENV
+        value: production
+      - key: APP_DEBUG
+        value: "false"
+      - key: APP_KEY
+        sync: false
+      - key: APP_URL
+        sync: false
+      - key: APP_LOCALE
+        value: id
+      - key: LOG_CHANNEL
+        value: stderr
+      - key: LOG_LEVEL
+        value: error
+      - key: SESSION_DRIVER
+        value: cookie
+      - key: CACHE_STORE
+        value: array
+      - key: QUEUE_CONNECTION
+        value: sync
+      - key: DB_CONNECTION
+        value: sqlite
+      - key: DB_DATABASE
+        value: /tmp/database.sqlite
+      - key: FILESYSTEM_DISK
+        value: public
+      - key: APP_CONFIG_CACHE
+        value: /tmp/config.php
+      - key: APP_EVENTS_CACHE
+        value: /tmp/events.php
+      - key: APP_PACKAGES_CACHE
+        value: /tmp/packages.php
+      - key: APP_ROUTES_CACHE
+        value: /tmp/routes.php
+      - key: APP_SERVICES_CACHE
+        value: /tmp/services.php
+      - key: VIEW_COMPILED_PATH
+        value: /tmp/views
