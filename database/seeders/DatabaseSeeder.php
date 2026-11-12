@@ -128,7 +128,7 @@ class DatabaseSeeder extends Seeder
                 'slug'        => 'dasyid-house',
                 'title'       => 'Dasyid House',
                 'kategori'    => 'Residential',
-                'deskripsi'   => "Perancangan interior hunian modern dengan konsep Dasyid House yang menekankan kesederhanaan, fungsi, dan keseimbangan antara ruang interior maupun exterior. Desain ini dirancang untuk menciptakan suasana hunian yang nyaman, sejuk, dan harmonis bagi penghuninya.",
+                'deskripsi'   => "Desain kamar tidur ini mengusung konsep Scandinavian yang mengutamakan kesederhanaan, kenyamanan, dan fungsionalitas. Perpaduan warna netral, material kayu bernuansa natural, serta pencahayaan alami dari bukaan jendela menciptakan suasana ruang yang hangat, tenang, dan nyaman.\n\nPenggunaan furnitur dengan bentuk sederhana dan garis yang bersih memperkuat karakter Scandinavian, sementara lemari built-in dan rak terbuka dirancang untuk mengoptimalkan penyimpanan tanpa mengurangi kesan lapang. Elemen panel kayu pada area tempat tidur turut memberikan kesatuan visual, sehingga keseluruhan ruang terasa harmonis dan tetap fungsional untuk kebutuhan sehari-hari.\n\nJendela besar yang menghadap langsung ke taman menghadirkan pemandangan hijau yang menyegarkan sekaligus memaksimalkan masuknya cahaya alami ke dalam ruang. Kehadiran elemen alam ini menciptakan suasana bangun pagi yang lebih segar, tenang, dan nyaman, sehingga penghuni dapat memulai hari dengan perasaan lebih rileks.",
                 'client'      => null,
                 'tahun'       => 2025,
                 'cover_image' => 'images/projects/dasyid-house/kamar-tidur.png',
@@ -136,9 +136,10 @@ class DatabaseSeeder extends Seeder
                 'media'       => [
                     [
                         'path'      => 'images/projects/dasyid-house/kamar-tidur.png',
-                        'caption'   => 'Master Bedroom — Skandinavian',
-                        'deskripsi' => "Desain kamar tidur ini menggunakan konsep Skandinavian yang memungkinkan fungsionalitas, kesederhanaan, material kayu alami, serta palet warna netral untuk menyediakan suasana kamar tidur yang bersih dan menyederhanakan. Penggunaan furnitur dengan bentuk sederhana dan garis yang bersih memungkinkan karakter Skandinavian, sementara lemari built-in dan rak terbuka dirancang untuk mengoptimalkan penggunaan ruang tanpa mengganggu estetika. Elemen panel kayu pada area tempat tidur memberikan kesan hangat, sementara tekstur material memberikan elemen fungsional untuk kebutuhan penyimpanan tanpa mengganggu kemegahan ruang. Pencahayaan difusikan sebagai alat untuk menciptakan suasana pagi yang lebih segar, tenang, dan harmonis.",
+                        'caption'   => 'Master Bedroom �?" Skandinavian',
+                        'deskripsi' => "Desain kamar tidur ini mengusung konsep Scandinavian yang mengutamakan kesederhanaan, kenyamanan, dan fungsionalitas. Perpaduan warna netral, material kayu bernuansa natural, serta pencahayaan alami dari bukaan jendela menciptakan suasana ruang yang hangat, tenang, dan nyaman.\n\nPenggunaan furnitur dengan bentuk sederhana dan garis yang bersih memperkuat karakter Scandinavian, sementara lemari built-in dan rak terbuka dirancang untuk mengoptimalkan penyimpanan tanpa mengurangi kesan lapang. Elemen panel kayu pada area tempat tidur turut memberikan kesatuan visual, sehingga keseluruhan ruang terasa harmonis dan tetap fungsional untuk kebutuhan sehari-hari.\n\nJendela besar yang menghadap langsung ke taman menghadirkan pemandangan hijau yang menyegarkan sekaligus memaksimalkan masuknya cahaya alami ke dalam ruang. Kehadiran elemen alam ini menciptakan suasana bangun pagi yang lebih segar, tenang, dan nyaman, sehingga penghuni dapat memulai hari dengan perasaan lebih rileks.",
                     ],
+                ],
                 ],
             ],
             [

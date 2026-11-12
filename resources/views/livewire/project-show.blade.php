@@ -120,14 +120,14 @@
     </figure>
 
     {{-- ─── Deskripsi pengantar (ala "Text description provided by the architects") ─── --}}
-    @if($project->deskripsi)
+    @if(!empty($deskripsi))
     <div class="section" style="max-width: 860px;">
         <p data-aos="fade-up"
            style="font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--color-accent); margin-bottom: 2.5rem;">
             Deskripsi Teks oleh Desainer
         </p>
         <div style="max-width: 720px; margin: 0 auto;">
-            @foreach(explode("\n\n", $project->deskripsi) as $paragraf)
+            @foreach(explode("\n\n", $deskripsi) as $paragraf)
             <p data-aos="fade-up"
                style="font-size: 1.02rem; font-weight: 300; line-height: 1.95; color: rgba(232,228,222,0.88); margin-bottom: 1.75rem;">
                 {{ trim($paragraf) }}
