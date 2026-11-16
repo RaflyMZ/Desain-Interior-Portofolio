@@ -39,12 +39,21 @@ class ProjectShow extends Component
                 ['path_or_url' => 'images/projects/house-mr-a/mr-a-2.png', 'caption' => 'House Mr. A — Tampilan 2', 'type' => 'image'],
                 ['path_or_url' => 'images/projects/house-mr-a/mr-a-3.png', 'caption' => 'House Mr. A — Tampilan 3', 'type' => 'image'],
             ],
+            'hotel-bisnis' => [
+                ['path_or_url' => 'images/projects/hotel-bisnis/walk-in-closet.png', 'caption' => 'Walk-in Closet — Dark Contemporary', 'type' => 'image'],
+                ['path_or_url' => 'images/projects/hotel-bisnis/prefunction-area.png', 'caption' => 'Prefunction Area', 'type' => 'image'],
+                ['path_or_url' => 'images/projects/hotel-bisnis/ballroom.png', 'caption' => 'Ballroom', 'type' => 'image'],
+            ],
+        ];
+
+        $nativeCovers = [
+            'hotel-bisnis' => 'images/projects/hotel-bisnis/ballroom.png',
         ];
 
         $deskripsi = $nativeDescriptions[$project->slug] ?? $project->deskripsi;
 
         if (isset($nativeMedia[$project->slug])) {
-            $project->cover_image = $nativeMedia[$project->slug][0]['path_or_url'];
+            $project->cover_image = $nativeCovers[$project->slug] ?? $nativeMedia[$project->slug][0]['path_or_url'];
             $project->setRelation('media', collect($nativeMedia[$project->slug])->map(function ($m) {
                 $media = new \App\Models\ProjectMedia();
                 $media->type = $m['type'];
