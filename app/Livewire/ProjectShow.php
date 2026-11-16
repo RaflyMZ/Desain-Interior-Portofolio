@@ -23,6 +23,7 @@ class ProjectShow extends Component
             'hotel-bisnis' => "Suasana hall lift pada perancangan ini terinspirasi dari Gunung Pangrango di Sukabumi, sebagai salah satu identitas alam yang kuat dan inspirasi motif batik Pancasona. Konsep ini bertujuan menghadirkan pengalaman ruang yang membuat pengunjung seolah berada di puncak gunung, dengan suasana luas yang menyerupai pemandangan deretan bukit dan pegunungan di sekitarnya.\n\nSuasana area prefunction yang ingin diciptakan pada perancangan ini terinspirasi dari suasana rimba, dengan mengambil referensi dari kawasan Lembah Purba yang berada di wilayah Sukabumi, tepatnya di kawasan Geopark Ciletuh. Pengunjung dapat merasakan suasana visual yang merepresentasikan hutan rimba yang dikombinasikan dengan konsep luxury melalui penggunaan material batu alam, dan detail finishing elegan.\n\nSuasana area ballroom dan ruang rapat terinspirasi dari Pantai Pangumbahan Sukabumi. Pengunjung saat memasuki area ballroom dan ruang rapat akan dihadirkan dengan suasana sejuk, dan berangin yang terinspirasi dari elemen laut yang menjadi bagian dari konsep Gurilaps. Suasana tersebut bertujuan menciptakan pengalaman ruang yang nyaman dan menenangkan.",
             'house-mr-s' => "House Mr. S adalah proyek interior hunian dengan konsep maskulin modern yang didominasi dengan warna gelap, sesuai keinginan client. Pada proyek ini, saya mengerjakan gambar kerja untuk ruang dapur serta merancang desain master bedroom dan walking closet (WIC).\n\nWalking closet dirancang dengan lemari pakaian untuk lipatan dan gantungan yang ditampilkan, dilengkapi rak display dan meja rias kamuflase. Penataan ini membuat area WIC tetap fungsional dan rapi, sekaligus selaras dengan karakter ruang yang elegan.",
             'kitchen-set-mr-l' => "Proyek kitchen set Ms. L dikerjakan selama tiga hari, pada 25 sampai 28 Juni 2025. Kitchen set ini mengusung konsep klasik dengan dominasi warna abu dan putih. Tantangan utama dalam proyek ini adalah adanya konstruksi beton pada area kitchen set, sehingga gambar kerja perlu disesuaikan dengan kondisi tersebut dan proses pengerjaannya memakan waktu lebih lama dari biasanya.",
+            'house-mr-a' => "Proyek ini merupakan perancangan interior hunian dengan konsep modern yang mencakup tiga ruang, yaitu kamar tidur anak, living room dan dapur. Proyek dikerjakan selama empat hari, dimulai pada 29 Juli 2025. Lingkup pekerjaan meliputi pembuatan gambar kerja untuk ketiga ruang tersebut sebagai acuan teknis dallam perwujudan desain, Untuk menampilkan hasil rancangan secara visual, proyek ini dilengkapi dengan render yang dibuat menggunakan Enscape. Pencahayaan LED pada render disesuaikan dengan desain yang ditampilkan, sehingga suasana ruang, material dan detail desain dapat terlihat lebih realisstis dan mudah dipahami.",
         ];
 
         $nativeMedia = [
@@ -32,6 +33,11 @@ class ProjectShow extends Component
             ],
             'kitchen-set-mr-l' => [
                 ['path_or_url' => 'images/projects/kitchen-set-mr-l/kitchen-set-mr-l.png', 'caption' => 'Kitchen Set Mr. L', 'type' => 'image'],
+            ],
+            'house-mr-a' => [
+                ['path_or_url' => 'images/projects/house-mr-a/mr-a-1.png', 'caption' => 'House Mr. A — Tampilan 1', 'type' => 'image'],
+                ['path_or_url' => 'images/projects/house-mr-a/mr-a-2.png', 'caption' => 'House Mr. A — Tampilan 2', 'type' => 'image'],
+                ['path_or_url' => 'images/projects/house-mr-a/mr-a-3.png', 'caption' => 'House Mr. A — Tampilan 3', 'type' => 'image'],
             ],
         ];
 

@@ -216,12 +216,28 @@ class DatabaseSeeder extends Seeder
                 'slug'        => 'house-mr-a',
                 'title'       => 'House Mr. A',
                 'kategori'    => 'Residential',
-                'deskripsi'   => "Perancangan interior hunian untuk klien pribadi dengan identitas House Mr. A. Konsep desain menciptakan suasana hunian yang modern, nyaman, dan sejuk dengan perhatian pada tata letak ruang, pencahayaan, serta pilihan material yang mendukung kenyamanan penghuni sehari-hari.",
+                'deskripsi'   => "Proyek ini merupakan perancangan interior hunian dengan konsep modern yang mencakup tiga ruang, yaitu kamar tidur anak, living room dan dapur. Proyek dikerjakan selama empat hari, dimulai pada 29 Juli 2025. Lingkup pekerjaan meliputi pembuatan gambar kerja untuk ketiga ruang tersebut sebagai acuan teknis dallam perwujudan desain, Untuk menampilkan hasil rancangan secara visual, proyek ini dilengkapi dengan render yang dibuat menggunakan Enscape. Pencahayaan LED pada render disesuaikan dengan desain yang ditampilkan, sehingga suasana ruang, material dan detail desain dapat terlihat lebih realisstis dan mudah dipahami.",
                 'client'      => null,
                 'tahun'       => 2025,
-                'cover_image' => null,
+                'cover_image' => 'images/projects/house-mr-a/mr-a-1.png',
                 'urutan'      => 7,
-                'media'       => [],
+                'media'       => [
+                    [
+                        'path'      => 'images/projects/house-mr-a/mr-a-1.png',
+                        'caption'   => 'House Mr. A — Tampilan 1',
+                        'deskripsi' => "Proyek ini merupakan perancangan interior hunian dengan konsep modern yang mencakup tiga ruang, yaitu kamar tidur anak, living room dan dapur. Proyek dikerjakan selama empat hari, dimulai pada 29 Juli 2025. Lingkup pekerjaan meliputi pembuatan gambar kerja untuk ketiga ruang tersebut sebagai acuan teknis dallam perwujudan desain, Untuk menampilkan hasil rancangan secara visual, proyek ini dilengkapi dengan render yang dibuat menggunakan Enscape. Pencahayaan LED pada render disesuaikan dengan desain yang ditampilkan, sehingga suasana ruang, material dan detail desain dapat terlihat lebih realisstis dan mudah dipahami.",
+                    ],
+                    [
+                        'path'      => 'images/projects/house-mr-a/mr-a-2.png',
+                        'caption'   => 'House Mr. A — Tampilan 2',
+                        'deskripsi' => "Proyek ini merupakan perancangan interior hunian dengan konsep modern yang mencakup tiga ruang, yaitu kamar tidur anak, living room dan dapur. Proyek dikerjakan selama empat hari, dimulai pada 29 Juli 2025. Lingkup pekerjaan meliputi pembuatan gambar kerja untuk ketiga ruang tersebut sebagai acuan teknis dallam perwujudan desain, Untuk menampilkan hasil rancangan secara visual, proyek ini dilengkapi dengan render yang dibuat menggunakan Enscape. Pencahayaan LED pada render disesuaikan dengan desain yang ditampilkan, sehingga suasana ruang, material dan detail desain dapat terlihat lebih realisstis dan mudah dipahami.",
+                    ],
+                    [
+                        'path'      => 'images/projects/house-mr-a/mr-a-3.png',
+                        'caption'   => 'House Mr. A — Tampilan 3',
+                        'deskripsi' => "Proyek ini merupakan perancangan interior hunian dengan konsep modern yang mencakup tiga ruang, yaitu kamar tidur anak, living room dan dapur. Proyek dikerjakan selama empat hari, dimulai pada 29 Juli 2025. Lingkup pekerjaan meliputi pembuatan gambar kerja untuk ketiga ruang tersebut sebagai acuan teknis dallam perwujudan desain, Untuk menampilkan hasil rancangan secara visual, proyek ini dilengkapi dengan render yang dibuat menggunakan Enscape. Pencahayaan LED pada render disesuaikan dengan desain yang ditampilkan, sehingga suasana ruang, material dan detail desain dapat terlihat lebih realisstis dan mudah dipahami.",
+                    ],
+                ],
             ],
             [
                 'slug'        => 'project-internship',
