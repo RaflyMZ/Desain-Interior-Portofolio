@@ -29,7 +29,13 @@
     {{-- Grid proyek: kartu besar --}}
     @if($projects->count())
     <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(420px, 1fr)); gap: 2rem; padding: 0 3rem 4rem; max-width: 1400px; margin: 0 auto;">
+        @php
+            $nativeCovers = [
+                'house-mr-s' => 'images/projects/house-mr-s/Mr.S 1.png',
+            ];
+        @endphp
         @foreach($projects as $project)
+        @php $cover = $nativeCovers[$project->slug] ?? $project->cover_image; @endphp
         <a href="{{ route('proyek.show', $project->slug) }}" wire:navigate
            class="project-card"
            style="position: relative; display: flex; flex-direction: column; overflow: hidden; background: var(--color-surface); border: 1px solid var(--color-border); transition: border-color 0.3s ease, transform 0.3s ease;"
@@ -37,8 +43,8 @@
            data-aos-delay="{{ $loop->index * 100 }}">
             {{-- Gambar --}}
             <div style="position: relative; aspect-ratio: 16/10; overflow: hidden;">
-                @if($project->cover_image)
-                    <img src="{{ Storage::url($project->cover_image) }}" alt="{{ $project->title }}"
+                @if($cover)
+                    <img src="{{ Storage::url($cover) }}" alt="{{ $project->title }}"
                          style="width: 100%; height: 100%; display: block; object-fit: cover; transition: transform 0.7s ease, filter 0.35s ease;">
                 @else
                     <div style="width: 100%; height: 100%; background: var(--color-border);"></div>

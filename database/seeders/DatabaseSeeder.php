@@ -140,7 +140,6 @@ class DatabaseSeeder extends Seeder
                         'deskripsi' => "Desain kamar tidur ini mengusung konsep Scandinavian yang mengutamakan kesederhanaan, kenyamanan, dan fungsionalitas. Perpaduan warna netral, material kayu bernuansa natural, serta pencahayaan alami dari bukaan jendela menciptakan suasana ruang yang hangat, tenang, dan nyaman.\n\nPenggunaan furnitur dengan bentuk sederhana dan garis yang bersih memperkuat karakter Scandinavian, sementara lemari built-in dan rak terbuka dirancang untuk mengoptimalkan penyimpanan tanpa mengurangi kesan lapang. Elemen panel kayu pada area tempat tidur turut memberikan kesatuan visual, sehingga keseluruhan ruang terasa harmonis dan tetap fungsional untuk kebutuhan sehari-hari.\n\nJendela besar yang menghadap langsung ke taman menghadirkan pemandangan hijau yang menyegarkan sekaligus memaksimalkan masuknya cahaya alami ke dalam ruang. Kehadiran elemen alam ini menciptakan suasana bangun pagi yang lebih segar, tenang, dan nyaman, sehingga penghuni dapat memulai hari dengan perasaan lebih rileks.",
                     ],
                 ],
-                ],
             ],
             [
                 'slug'        => 'kitchen-set-mr-o',
@@ -178,12 +177,23 @@ class DatabaseSeeder extends Seeder
                 'slug'        => 'house-mr-s',
                 'title'       => 'House Mr. S',
                 'kategori'    => 'Residential',
-                'deskripsi'   => "Perancangan interior hunian untuk klien pribadi dengan identitas House Mr. S. Konsep desain menyajikan ruang hunian yang nyaman, fungsional, dan harmonis dengan sentuhan personal yang mencerminkan karakter pemilik, melalui tata letak ruang yang efisien dan pilihan material yang berkualitas.",
+                'deskripsi'   => "House Mr. S adalah proyek interior hunian dengan konsep maskulin modern yang didominasi dengan warna gelap, sesuai keinginan client. Pada proyek ini, saya mengerjakan gambar kerja untuk ruang dapur serta merancang desain master bedroom dan walking closet (WIC).\n\nWalking closet dirancang dengan lemari pakaian untuk lipatan dan gantungan yang ditampilkan, dilengkapi rak display dan meja rias kamuflase. Penataan ini membuat area WIC tetap fungsional dan rapi, sekaligus selaras dengan karakter ruang yang elegan.",
                 'client'      => null,
                 'tahun'       => 2025,
-                'cover_image' => null,
+                'cover_image' => 'images/projects/house-mr-s/Mr.S 1.png',
                 'urutan'      => 5,
-                'media'       => [],
+                'media'       => [
+                    [
+                        'path'      => 'images/projects/house-mr-s/Mr.S 1.png',
+                        'caption'   => 'House Mr. S — Tampilan 1',
+                        'deskripsi' => "House Mr. S adalah proyek interior hunian dengan konsep maskulin modern yang didominasi dengan warna gelap, sesuai keinginan client. Pada proyek ini, saya mengerjakan gambar kerja untuk ruang dapur serta merancang desain master bedroom dan walking closet (WIC).\n\nWalking closet dirancang dengan lemari pakaian untuk lipatan dan gantungan yang ditampilkan, dilengkapi rak display dan meja rias kamuflase. Penataan ini membuat area WIC tetap fungsional dan rapi, sekaligus selaras dengan karakter ruang yang elegan.",
+                    ],
+                    [
+                        'path'      => 'images/projects/house-mr-s/Mr.S 2.png',
+                        'caption'   => 'House Mr. S — Tampilan 2',
+                        'deskripsi' => "House Mr. S adalah proyek interior hunian dengan konsep maskulin modern yang didominasi dengan warna gelap, sesuai keinginan client. Pada proyek ini, saya mengerjakan gambar kerja untuk ruang dapur serta merancang desain master bedroom dan walking closet (WIC).\n\nWalking closet dirancang dengan lemari pakaian untuk lipatan dan gantungan yang ditampilkan, dilengkapi rak display dan meja rias kamuflase. Penataan ini membuat area WIC tetap fungsional dan rapi, sekaligus selaras dengan karakter ruang yang elegan.",
+                    ],
+                ],
             ],
             [
                 'slug'        => 'kitchen-set-mr-l',

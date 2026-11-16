@@ -21,9 +21,28 @@ class ProjectShow extends Component
         $nativeDescriptions = [
             'dasyid-house' => "Desain kamar tidur ini mengusung konsep Scandinavian yang mengutamakan kesederhanaan, kenyamanan, dan fungsionalitas. Perpaduan warna netral, material kayu bernuansa natural, serta pencahayaan alami dari bukaan jendela menciptakan suasana ruang yang hangat, tenang, dan nyaman.\n\nPenggunaan furnitur dengan bentuk sederhana dan garis yang bersih memperkuat karakter Scandinavian, sementara lemari built-in dan rak terbuka dirancang untuk mengoptimalkan penyimpanan tanpa mengurangi kesan lapang. Elemen panel kayu pada area tempat tidur turut memberikan kesatuan visual, sehingga keseluruhan ruang terasa harmonis dan tetap fungsional untuk kebutuhan sehari-hari.\n\nJendela besar yang menghadap langsung ke taman menghadirkan pemandangan hijau yang menyegarkan sekaligus memaksimalkan masuknya cahaya alami ke dalam ruang. Kehadiran elemen alam ini menciptakan suasana bangun pagi yang lebih segar, tenang, dan nyaman, sehingga penghuni dapat memulai hari dengan perasaan lebih rileks.",
             'hotel-bisnis' => "Suasana hall lift pada perancangan ini terinspirasi dari Gunung Pangrango di Sukabumi, sebagai salah satu identitas alam yang kuat dan inspirasi motif batik Pancasona. Konsep ini bertujuan menghadirkan pengalaman ruang yang membuat pengunjung seolah berada di puncak gunung, dengan suasana luas yang menyerupai pemandangan deretan bukit dan pegunungan di sekitarnya.\n\nSuasana area prefunction yang ingin diciptakan pada perancangan ini terinspirasi dari suasana rimba, dengan mengambil referensi dari kawasan Lembah Purba yang berada di wilayah Sukabumi, tepatnya di kawasan Geopark Ciletuh. Pengunjung dapat merasakan suasana visual yang merepresentasikan hutan rimba yang dikombinasikan dengan konsep luxury melalui penggunaan material batu alam, dan detail finishing elegan.\n\nSuasana area ballroom dan ruang rapat terinspirasi dari Pantai Pangumbahan Sukabumi. Pengunjung saat memasuki area ballroom dan ruang rapat akan dihadirkan dengan suasana sejuk, dan berangin yang terinspirasi dari elemen laut yang menjadi bagian dari konsep Gurilaps. Suasana tersebut bertujuan menciptakan pengalaman ruang yang nyaman dan menenangkan.",
+            'house-mr-s' => "House Mr. S adalah proyek interior hunian dengan konsep maskulin modern yang didominasi dengan warna gelap, sesuai keinginan client. Pada proyek ini, saya mengerjakan gambar kerja untuk ruang dapur serta merancang desain master bedroom dan walking closet (WIC).\n\nWalking closet dirancang dengan lemari pakaian untuk lipatan dan gantungan yang ditampilkan, dilengkapi rak display dan meja rias kamuflase. Penataan ini membuat area WIC tetap fungsional dan rapi, sekaligus selaras dengan karakter ruang yang elegan.",
+        ];
+
+        $nativeMedia = [
+            'house-mr-s' => [
+                ['path_or_url' => 'images/projects/house-mr-s/Mr.S 1.png', 'caption' => 'House Mr. S — Tampilan 1', 'type' => 'image'],
+                ['path_or_url' => 'images/projects/house-mr-s/Mr.S 2.png', 'caption' => 'House Mr. S — Tampilan 2', 'type' => 'image'],
+            ],
         ];
 
         $deskripsi = $nativeDescriptions[$project->slug] ?? $project->deskripsi;
+
+        if (isset($nativeMedia[$project->slug])) {
+            $project->cover_image = $nativeMedia[$project->slug][0]['path_or_url'];
+            $project->setRelation('media', collect($nativeMedia[$project->slug])->map(function ($m) {
+                $media = new \App\Models\ProjectMedia();
+                $media->type = $m['type'];
+                $media->path_or_url = $m['path_or_url'];
+                $media->caption = $m['caption'] ?? null;
+                return $media;
+            }));
+        }
 
         return view('livewire.project-show', [
             'project'   => $project,
