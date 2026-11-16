@@ -239,17 +239,6 @@ class DatabaseSeeder extends Seeder
                     ],
                 ],
             ],
-            [
-                'slug'        => 'project-internship',
-                'title'       => 'Project Internship',
-                'kategori'    => 'Internship',
-                'deskripsi'   => "Kumpulan hasil pekerjaan dan visualisasi 3D yang dihasilkan selama program magang (internship) di bidang desain interior. Meliputi berbagai proses dari pengembangan konsep, pemodelan 3D, hingga rendering interior untuk berbagai tipe ruang.",
-                'client'      => null,
-                'tahun'       => 2025,
-                'cover_image' => null,
-                'urutan'      => 4,
-                'media'       => [],
-            ],
         ];
 
         foreach ($projects as $data) {
