@@ -199,12 +199,18 @@ class DatabaseSeeder extends Seeder
                 'slug'        => 'kitchen-set-mr-l',
                 'title'       => 'Kitchen Set Mr. L',
                 'kategori'    => 'Residential',
-                'deskripsi'   => "Perancangan interior dapur untuk klien pribadi dengan identitas Kitchen Set Mr. L. Konsep desain dirancang untuk mengoptimalkan fungsi dapur dengan tata letak yang ergonomis, kombinasi material yang cocok, serta sentuhan estetika yang mencerminkan gaya hidup pemilik hunian.",
+                'deskripsi'   => "Proyek kitchen set Ms. L dikerjakan selama tiga hari, pada 25 sampai 28 Juni 2025. Kitchen set ini mengusung konsep klasik dengan dominasi warna abu dan putih. Tantangan utama dalam proyek ini adalah adanya konstruksi beton pada area kitchen set, sehingga gambar kerja perlu disesuaikan dengan kondisi tersebut dan proses pengerjaannya memakan waktu lebih lama dari biasanya.",
                 'client'      => null,
                 'tahun'       => 2025,
-                'cover_image' => null,
+                'cover_image' => 'images/projects/kitchen-set-mr-l/kitchen-set-mr-l.png',
                 'urutan'      => 6,
-                'media'       => [],
+                'media'       => [
+                    [
+                        'path'      => 'images/projects/kitchen-set-mr-l/kitchen-set-mr-l.png',
+                        'caption'   => 'Kitchen Set Mr. L',
+                        'deskripsi' => "Proyek kitchen set Ms. L dikerjakan selama tiga hari, pada 25 sampai 28 Juni 2025. Kitchen set ini mengusung konsep klasik dengan dominasi warna abu dan putih. Tantangan utama dalam proyek ini adalah adanya konstruksi beton pada area kitchen set, sehingga gambar kerja perlu disesuaikan dengan kondisi tersebut dan proses pengerjaannya memakan waktu lebih lama dari biasanya.",
+                    ],
+                ],
             ],
             [
                 'slug'        => 'house-mr-a',
