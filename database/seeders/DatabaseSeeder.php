@@ -114,12 +114,12 @@ class DatabaseSeeder extends Seeder
                     ],
                     [
                         'path'      => 'images/projects/hotel-bisnis/prefunction-area.png',
-                        'caption'   => 'Prefunction Area — Konsep Rimba',
+                        'caption'   => 'Prefunction Area',
                         'deskripsi' => "Area prefunction mengusung pendekatan Sense of Place dengan tema Rimba, terinspirasi dari kekayaan alam dan vegetasi Sukabumi. Karakter ini diwujudkan melalui material kayu, warna alami, tekstur organik, serta interpretasi Batik Gurilaps untuk memperkuat identitas lokal dalam balutan desain modern dan elegan.\n\nPenataan furnitur fleksibel, sirkulasi terorganisasi, pencahayaan, dan dukungan teknologi dirancang untuk menunjang kenyamanan serta fungsi ruang sebagai area transisi menuju ballroom.",
                     ],
                     [
                         'path'      => 'images/projects/hotel-bisnis/ballroom.png',
-                        'caption'   => 'Ballroom — Konsep Laut',
+                        'caption'   => 'Ballroom',
                         'deskripsi' => "Ballroom mengusung pendekatan Sense of Place dengan tema Laut, terinspirasi dari karakter pesisir Sukabumi. Identitas lokal diterapkan melalui interpretasi motif Batik Gurilaps dan elemen visual yang terinspirasi dari pergerakan air serta perjalanan penyu menuju laut, dalam balutan desain modern dan elegan.\n\nUntuk menunjang kebutuhan MICE, ruang dirancang fleksibel melalui penggunaan partisi otomatis, pencahayaan yang dapat disesuaikan, sistem tata udara, dan elemen akustik guna meningkatkan kenyamanan serta kualitas kegiatan.",
                     ],
                 ],
