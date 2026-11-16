@@ -180,16 +180,16 @@ class DatabaseSeeder extends Seeder
                 'deskripsi'   => "House Mr. S adalah proyek interior hunian dengan konsep maskulin modern yang didominasi dengan warna gelap, sesuai keinginan client. Pada proyek ini, saya mengerjakan gambar kerja untuk ruang dapur serta merancang desain master bedroom dan walking closet (WIC).\n\nWalking closet dirancang dengan lemari pakaian untuk lipatan dan gantungan yang ditampilkan, dilengkapi rak display dan meja rias kamuflase. Penataan ini membuat area WIC tetap fungsional dan rapi, sekaligus selaras dengan karakter ruang yang elegan.",
                 'client'      => null,
                 'tahun'       => 2025,
-                'cover_image' => 'images/projects/house-mr-s/Mr.S 1.png',
+                'cover_image' => 'images/projects/house-mr-s/mr-s-1.png',
                 'urutan'      => 5,
                 'media'       => [
                     [
-                        'path'      => 'images/projects/house-mr-s/Mr.S 1.png',
+                        'path'      => 'images/projects/house-mr-s/mr-s-1.png',
                         'caption'   => 'House Mr. S — Tampilan 1',
                         'deskripsi' => "House Mr. S adalah proyek interior hunian dengan konsep maskulin modern yang didominasi dengan warna gelap, sesuai keinginan client. Pada proyek ini, saya mengerjakan gambar kerja untuk ruang dapur serta merancang desain master bedroom dan walking closet (WIC).\n\nWalking closet dirancang dengan lemari pakaian untuk lipatan dan gantungan yang ditampilkan, dilengkapi rak display dan meja rias kamuflase. Penataan ini membuat area WIC tetap fungsional dan rapi, sekaligus selaras dengan karakter ruang yang elegan.",
                     ],
                     [
-                        'path'      => 'images/projects/house-mr-s/Mr.S 2.png',
+                        'path'      => 'images/projects/house-mr-s/mr-s-2.png',
                         'caption'   => 'House Mr. S — Tampilan 2',
                         'deskripsi' => "House Mr. S adalah proyek interior hunian dengan konsep maskulin modern yang didominasi dengan warna gelap, sesuai keinginan client. Pada proyek ini, saya mengerjakan gambar kerja untuk ruang dapur serta merancang desain master bedroom dan walking closet (WIC).\n\nWalking closet dirancang dengan lemari pakaian untuk lipatan dan gantungan yang ditampilkan, dilengkapi rak display dan meja rias kamuflase. Penataan ini membuat area WIC tetap fungsional dan rapi, sekaligus selaras dengan karakter ruang yang elegan.",
                     ],

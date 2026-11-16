@@ -26,8 +26,8 @@ class ProjectShow extends Component
 
         $nativeMedia = [
             'house-mr-s' => [
-                ['path_or_url' => 'images/projects/house-mr-s/Mr.S 1.png', 'caption' => 'House Mr. S — Tampilan 1', 'type' => 'image'],
-                ['path_or_url' => 'images/projects/house-mr-s/Mr.S 2.png', 'caption' => 'House Mr. S — Tampilan 2', 'type' => 'image'],
+                ['path_or_url' => 'images/projects/house-mr-s/mr-s-1.png', 'caption' => 'House Mr. S — Tampilan 1', 'type' => 'image'],
+                ['path_or_url' => 'images/projects/house-mr-s/mr-s-2.png', 'caption' => 'House Mr. S — Tampilan 2', 'type' => 'image'],
             ],
         ];
 

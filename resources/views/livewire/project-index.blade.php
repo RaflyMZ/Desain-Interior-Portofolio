@@ -31,7 +31,7 @@
     <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(420px, 1fr)); gap: 2rem; padding: 0 3rem 4rem; max-width: 1400px; margin: 0 auto;">
         @php
             $nativeCovers = [
-                'house-mr-s' => 'images/projects/house-mr-s/Mr.S 1.png',
+                'house-mr-s' => 'images/projects/house-mr-s/mr-s-1.png',
             ];
         @endphp
         @foreach($projects as $project)
